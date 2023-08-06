@@ -10,7 +10,7 @@
     "doctorapp",
     "backend"
   ],
-  "author": "nitesh kudmethe",
+  "author": "vaishnavi alla",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",

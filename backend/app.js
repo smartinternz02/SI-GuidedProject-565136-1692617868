@@ -16,16 +16,18 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://0.0.0.0:27017/doctor_app', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(error => console.error('Failed to connect to MongoDB', error));
+//mongoose.connect('mongodb://localhost/doctor_app', { useNewUrlParser: true, useUnifiedTopology: true })
+  //.then(() => console.log('Connected to MongoDB'))
+  //.catch(error => console.error('Failed to connect to MongoDB', error));
 // Connect to MongoDB
-// mongoose.connect('mongodb://localhost/doctor_app', { useNewUrlParser: true, useUnifiedTopology: true });
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function() {
-//     console.log("Connected to MongoDB");
-// });
+ mongoose.connect('mongodb://127.0.0.1/doctorapp', { useNewUrlParser: true, useUnifiedTopology: true });
+const db = mongoose.connection;
+ db.on('error', console.error.bind(console, 'connection error:'));
+ db.once('open', function() {
+     console.log("Connected to MongoDB");
+});
+
+
 
 
 
